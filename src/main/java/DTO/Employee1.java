@@ -21,10 +21,10 @@ public class Employee1 {
 		this.address = address;
 		this.phone = phone;
 	}
-	@Override
-	public String toString() {
-		return "Employee1 [id=" + id + ", name=" + name + ", address=" + address + ", phone=" + phone + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Employee1 [id=" + id + ", name=" + name + ", address=" + address + ", phone=" + phone + "]";
+//	}
 	public int getId() {
 		return id;
 	}

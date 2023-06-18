@@ -1,5 +1,9 @@
 package oneToOne;
 
+import javax.persistence.Persistence;
+
+import DTO.Person;
+
 public class Controller {
 	public static void main(String[] args) {
 		DAO dao = new DAO();
@@ -15,6 +19,8 @@ public class Controller {
 				System.out.println("Enter the id you want to find");
 				int id = dao.scanner.nextInt();
 				dao.findPerson(id);
+				System.out.println(Persistence.createEntityManagerFactory("yuvraj").createEntityManager().find(Person.class, 1));
+
 			case 3:
 				dao.displayAll();break;
 			case 4: 
@@ -28,7 +34,8 @@ public class Controller {
 				
 			
 			}
+			
+			
 		}
-		
 	}
 }

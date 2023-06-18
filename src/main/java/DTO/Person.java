@@ -1,5 +1,6 @@
 package DTO;
 
+import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -9,6 +10,7 @@ import javax.persistence.Table;
 //Owning side
 
 @Entity
+@Cacheable
 @Table(name="Manushya")
 public class Person {
 	@Id
@@ -29,6 +31,11 @@ public class Person {
 		this.name = name;
 		this.address = address;
 		this.aadharCard = aadharCard;
+	}
+	
+	@Override
+	public String toString() {
+		return "Person [id=" + id + ", name=" + name + ", address=" + address + ", aadharCard=" + aadharCard + "]";
 	}
 	public int getId() {
 		return id;
@@ -54,9 +61,9 @@ public class Person {
 	public void setAadharCard(AadharCard aadharCard) {
 		this.aadharCard = aadharCard;
 	}
-	@Override
-	public String toString() {
-		return "Person [id=" + id + ", name=" + name + ", address=" + address + ", aadharCard=" + aadharCard + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Person [id=" + id + ", name=" + name + ", address=" + address + ", aadharCard=" + aadharCard + "]";
+//	}
 	
 }

@@ -5,7 +5,9 @@
 	version="2.1">
 
 	<persistence-unit name="yuvraj">
+
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+		<shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
 		<properties>
 			<property name="javax.persistence.jdbc.driver"
 				value="com.mysql.cj.jdbc.Driver" />
@@ -16,10 +18,14 @@
 				value="mysql" />
 			<property name="hibernate.show_sql" value="true" />
 
+
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.dialect"
 				value="org.hibernate.dialect.MySQL8Dialect" />
-
+			<property name="hibernate.cache.use_second_level_cache"
+				value="true"></property>
+			<property name="hibernate.cache.region.factory_class"
+				value="ehcache-singleton"></property>
 		</properties>
 	</persistence-unit>
 </persistence>

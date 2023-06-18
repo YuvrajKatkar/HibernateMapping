@@ -3,6 +3,7 @@ package DTO;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,7 +15,7 @@ public class Company1 {
 	private int id;
 	private String name;
 	private String gst;
-	@OneToMany
+	@OneToMany(fetch = FetchType.EAGER)
 	private List<Employee1> employee1s;
 	public int getId() {
 		return id;
@@ -63,9 +64,9 @@ public class Company1 {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	@Override
-	public String toString() {
-		return "Company1 [id=" + id + ", name=" + name + ", gst=" + gst + ", employee1s=" + employee1s + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "Company1 [id=" + id + ", name=" + name + ", gst=" + gst + ", employee1s=" + employee1s + "]";
+//	}
 	
 }

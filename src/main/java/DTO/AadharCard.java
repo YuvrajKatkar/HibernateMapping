@@ -26,6 +26,11 @@ public class AadharCard {
 		this.name = name;
 		this.address = address;
 	}
+	
+	@Override
+	public String toString() {
+		return "AadharCard [id=" + id + ", name=" + name + ", address=" + address + "]";
+	}
 	public int getId() {
 		return id;
 	}
@@ -44,9 +49,9 @@ public class AadharCard {
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	@Override
-	public String toString() {
-		return "AadharCard [id=" + id + ", name=" + name + ", address=" + address + "]";
-	}
+//	@Override
+//	public String toString() {
+//		return "AadharCard [id=" + id + ", name=" + name + ", address=" + address + "]";
+//	}
 	
 }
